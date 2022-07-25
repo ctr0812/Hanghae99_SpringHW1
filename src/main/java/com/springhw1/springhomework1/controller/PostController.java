@@ -1,9 +1,9 @@
 package com.springhw1.springhomework1.controller;
 
-import com.springhw1.springhomework1.domain.PasswordRequestDto;
-import com.springhw1.springhomework1.domain.Post;
-import com.springhw1.springhomework1.domain.PostRepository;
-import com.springhw1.springhomework1.domain.PostRequestDto;
+import com.springhw1.springhomework1.dto.PasswordRequestDto;
+import com.springhw1.springhomework1.model.Post;
+import com.springhw1.springhomework1.repository.PostRepository;
+import com.springhw1.springhomework1.dto.PostRequestDto;
 import com.springhw1.springhomework1.response.DeleteResponse;
 import com.springhw1.springhomework1.response.PasswordResponse;
 import com.springhw1.springhomework1.response.PostOneResponse;
@@ -13,8 +13,6 @@ import com.springhw1.springhomework1.service.ResponseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Response;
-import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -60,7 +58,7 @@ public class PostController {
 
     // 게시글 삭제 api
     @DeleteMapping("/api/posts/{id}")
-    public DeleteResponse deletePost(@PathVariable Long id, @RequestBody PostRequestDto requestDto) {
+    public DeleteResponse deletePost(@PathVariable Long id) {
         postRepository.deleteById(id);
         return responseService.getTrueResponse(true);
     }

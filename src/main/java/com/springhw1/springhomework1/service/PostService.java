@@ -1,8 +1,8 @@
 package com.springhw1.springhomework1.service;
 
-import com.springhw1.springhomework1.domain.Post;
-import com.springhw1.springhomework1.domain.PostRepository;
-import com.springhw1.springhomework1.domain.PostRequestDto;
+import com.springhw1.springhomework1.model.Post;
+import com.springhw1.springhomework1.repository.PostRepository;
+import com.springhw1.springhomework1.dto.PostRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

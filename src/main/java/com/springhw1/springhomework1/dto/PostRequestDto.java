@@ -1,8 +1,6 @@
-package com.springhw1.springhomework1.domain;
+package com.springhw1.springhomework1.dto;
 
 import lombok.Getter;
-
-import javax.persistence.Column;
 
 @Getter
 public class PostRequestDto {
